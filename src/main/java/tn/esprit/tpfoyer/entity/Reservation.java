@@ -7,6 +7,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class Reservation implements Serializable {
     @Setter(AccessLevel.NONE)
     private String idResservation;
 
-    private Date anneeUniversitaire;
+    private LocalDate anneeUniversitaire;
     private Boolean estValide;
 
     @ManyToMany
