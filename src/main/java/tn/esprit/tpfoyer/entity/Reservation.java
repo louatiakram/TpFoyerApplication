@@ -3,10 +3,8 @@ package tn.esprit.tpfoyer.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -17,8 +15,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
+@ToString
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Reservation implements Serializable {
     @Id
+    @Setter(AccessLevel.NONE)
     private String idResservation;
 
     private Date anneeUniversitaire;
