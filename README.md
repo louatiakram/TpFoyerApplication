@@ -1,3 +1,3 @@
 # TpFoyerApplication
 
-Spring Boot JPA
+Spring Boot JPA - Web Service REST
